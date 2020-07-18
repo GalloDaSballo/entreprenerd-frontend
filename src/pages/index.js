@@ -4,18 +4,15 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import ExternalLink from "../components/ExternalLink"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <h1>What's up I'm Alex the Entreprenerd, this is my site, basically a bunch of free stuff for you</h1>
+    <h3><ExternalLink to="https://www.udemy.com/course/the-complete-strapi-course/" title="The Complete Strapi Course" /></h3>
+    <h3><ExternalLink to="https://github.com/GalloDaSballo" title="Github" /></h3>
+    <h3><ExternalLink to="https://www.codementor.io/@alessandrovalerani" title="Codementor" /></h3>
   </Layout>
 )
 
