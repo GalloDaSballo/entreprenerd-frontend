@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import SEO from "../components/seo"
+import ExternalLink from "../components/ExternalLink"
 
 export default ({ data }) => (
     <Layout>
@@ -12,11 +13,11 @@ export default ({ data }) => (
         <p>These are free downloads for my students</p>
         {console.log("data", data)}
         <div className="grid">
-        {data.allStrapiFreebie.nodes.map(({image, name, file}) => (
+        {data.allStrapiFreebie.nodes.map(({image, name, file_url}) => (
             <div>
                 <Img fixed={image.childImageSharp.fixed}/>
                 <h4>{name}</h4>
-                <a href={file.absolutePath} download>Download</a>
+                <ExternalLink to={file_url} title="Download" />
             </div>
         ))}
         </div>
@@ -36,9 +37,7 @@ query getFreebies {
           }
         }
         name
-        file {
-          absolutePath
-        }
+        file_url
       }
     }
 }
