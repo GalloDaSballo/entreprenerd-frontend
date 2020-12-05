@@ -1,8 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import ExternalLink from "../components/ExternalLink"
 
@@ -13,7 +11,8 @@ const IndexPage = () => (
     <h3><ExternalLink to="https://www.udemy.com/course/the-complete-strapi-course/" title="The Complete Strapi Course" /></h3>
     <h3><ExternalLink to="https://www.youtube.com/c/AlexTheEntreprenerd" title="Youtube" /></h3>
     <h3><ExternalLink to="https://github.com/GalloDaSballo" title="Github" /></h3>
-    <h3><ExternalLink to="https://www.codementor.io/@alessandrovalerani" title="Codementor" /></h3>
+    <h3><ExternalLink to="https://calendly.com/alex-entreprenerd/15min" title="Discuss Mentoring Options with me" /> </h3>
+    <h3><ExternalLink to="https://www.codementor.io/@alex_entreprenerd" title="Codementor" /></h3>
   </Layout>
 )
 
