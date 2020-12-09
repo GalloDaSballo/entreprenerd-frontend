@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-// import Img from "gatsby-image"
-import { Link, Img } from "gatsby"
+import Img from "gatsby-image"
+import { Link } from "gatsby"
 import SEO from "../components/seo"
 
 export default ({ data }) => (
@@ -14,7 +14,7 @@ export default ({ data }) => (
       .reverse()
       .map(({ title, strapiId, image, slug }) => (
         <div key={strapiId}>
-          {/* <Img fixed={image.childImageSharp.fixed} /> */}
+          <Img fixed={image.childImageSharp.fixed} />
           <Link to={`/posts/${slug}`}>
             <h4>{title}</h4>
           </Link>
@@ -31,6 +31,13 @@ export const pageQuery = graphql`
         title
         slug
         strapiId
+        image {
+          childImageSharp {
+            fixed(width: 300) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
   }

@@ -11,7 +11,7 @@ export default function postTemplate({ data }) {
   return (
     <Layout>
       <SEO title={post.meta_title} description={post.meta_description} />
-      {/* <Img fixed={post.image} /> */}
+      <Img fixed={post.image.childImageSharp.fixed} />
       <ReactMarkdown children={post.content} />
     </Layout>
   )
@@ -24,7 +24,13 @@ export const query = graphql`
       meta_title
       meta_description
       content
-      # image
+      image {
+        childImageSharp {
+          fixed(width: 300) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   }
 `

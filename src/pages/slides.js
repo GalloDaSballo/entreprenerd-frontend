@@ -31,13 +31,13 @@ export const pageQuery = graphql`
       nodes {
         title
         link
-        # image {
-        #   childImageSharp {
-        #     fixed(width: 300) {
-        #       ...GatsbyImageSharpFixed
-        #     }
-        #   }
-        # }
+        image {
+          childImageSharp {
+            fixed(width: 300) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
   }

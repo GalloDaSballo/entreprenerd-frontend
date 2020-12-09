@@ -28,13 +28,13 @@ export const pageQuery = graphql`
   query getFreebies {
     allStrapiFreebie {
       nodes {
-        # image {
-        #   childImageSharp {
-        #     fixed(width: 300) {
-        #       ...GatsbyImageSharpFixed
-        #     }
-        #   }
-        # }
+        image {
+          childImageSharp {
+            fixed(width: 300) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         name
         file_url
       }

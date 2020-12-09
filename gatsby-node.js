@@ -11,14 +11,11 @@ exports.createPages = async ({ graphql, actions }) => {
     query getPosts {
       allStrapiPost {
         nodes {
-          title
-          strapiId
           slug
         }
       }
     }
   `)
-
 
   data.allStrapiPost.nodes.forEach(post => {
     actions.createPage({
