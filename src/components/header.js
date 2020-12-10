@@ -27,9 +27,19 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <h1 >
-        <Link style={{color: 'white'}} to="/freebies/">Freebies</Link> <br />
-        <Link style={{color: 'white'}} to="/slides/">Slides</Link> <br />
+      <h1>
+        <Link style={{ color: "white" }} to="/freebies/">
+          Freebies
+        </Link>{" "}
+        <br />
+        <Link style={{ color: "white" }} to="/slides/">
+          Slides
+        </Link>{" "}
+        <br />
+        <Link style={{ color: "white" }} to="/posts/">
+          posts
+        </Link>{" "}
+        <br />
       </h1>
     </div>
   </header>

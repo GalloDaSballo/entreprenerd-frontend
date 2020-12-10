@@ -37,8 +37,8 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL,
         queryLimit: -1, // Default to 100
-        contentTypes: [`freebie`, `lecture`, `question`]
-      }
+        contentTypes: [`freebie`, `lecture`, `question`, `post`],
+      },
     },
     {
       resolve: `gatsby-plugin-facebook-pixel`,
@@ -50,9 +50,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          process.env.GTM_ID
-        ],
+        trackingIds: [process.env.GTM_ID],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
@@ -83,14 +81,14 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     {
-      resolve: 'gatsby-plugin-iubenda-cookie-footer',
+      resolve: "gatsby-plugin-iubenda-cookie-footer",
       options: {
         iubendaOptions: {
           lang: "en",
           siteId: process.env.IUBENDA_SITE_ID,
-          cookiePolicyId: process.env.IUBENDA_POLICY_ID
+          cookiePolicyId: process.env.IUBENDA_POLICY_ID,
         },
-      }
+      },
     },
   ],
 }
