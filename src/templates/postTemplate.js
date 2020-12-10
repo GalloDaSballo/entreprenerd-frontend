@@ -12,7 +12,7 @@ export default function postTemplate({ data }) {
     <Layout>
       <SEO title={post.meta_title} description={post.meta_description} />
       <Img fixed={post.image.childImageSharp.fixed} />
-      <ReactMarkdown children={post.content} />
+      <ReactMarkdown allowDangerousHtml={true} children={post.content} />
     </Layout>
   )
 }
